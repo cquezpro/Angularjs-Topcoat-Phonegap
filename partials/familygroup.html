@@ -1,0 +1,20 @@
+<div class="topcoat-navigation-bar">
+	<div class="back-button" ng-show="{{bBackShow}}" ng-click="back();">
+		<span>Back</span>
+	</div>
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">{{title}}</h1>
+    </div>
+	<div class="logout-button" ng-click="logout();">
+		<span>Logout</span>
+	</div>
+</div>
+<div class="topcoat-list__container scroller" style="top:65px;">
+    <ul class="topcoat-list list">
+        <li ng-repeat="family in familygroup" class="topcoat-list__item">
+            <a ng-click="showFamily({{$index}})">
+                <p>{{family.leadername}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

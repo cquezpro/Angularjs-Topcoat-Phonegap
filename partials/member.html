@@ -1,0 +1,51 @@
+<div class="topcoat-navigation-bar">
+	<div class="back-button" ng-show="{{bBackShow}}" ng-click="back();">
+		<span>Back</span>
+	</div>
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">{{title}}</h1>
+    </div>
+	<div class="logout-button" ng-click="logout();">
+		<span>Logout</span>
+	</div>
+</div>
+<div class="photo">
+	<img ng-src="{{baseImageUrl+member.image}}" />
+	<div class="address">
+		<span>{{member.frcc_member_id}}</span>
+		<br/>
+        <span>{{member.cname + ' ' + member.fullname}}</span>
+        <br/>
+        <span>{{member.street}}</span>
+        <br/>
+		<span>{{member.city + ' ' + member.zip + ' ' + member.state}}</span>
+	</div>
+</div>
+
+<div class="topcoat-list__container scroller" style="top:170px;">
+	<ul class="info" style="padding-left: 10px;">
+		<li class="email" onclick="sendMail();">
+			<span>Email</span>
+			<span class="value">{{member.email}}</span>
+			<img class="nextimg" src="css/images/next.png">
+		</li>
+		<li class="home">
+			<span>Home</span>
+			<a href="tel:{{member.home}}">
+				<span class="value">{{member.home}}</span>
+			</a>
+			<img class="nextimg" src="css/images/next.png">
+		</li>
+		<li class="cell">
+			<span>Cell</span>
+			<a href="tel:{{member.cell}}">
+				<span class="value">{{member.cell}}</span>
+			</a>
+			<img class="nextimg"  src="css/images/next.png">
+		</li>
+	</ul>
+	<div id="map"></div>
+	<!--<map zoom="14" center="[{{Latitude}}, {{Longitude}}]">
+		<marker position="[{{Latitude}}, {{Longitude}}]" />
+	</map>-->
+</div>
